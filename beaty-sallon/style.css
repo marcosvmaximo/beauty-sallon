@@ -1,0 +1,368 @@
+/* GLOBAL RESETS */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --cor1: #30220e;
+  --cor2: #ffa724;
+  --cor3: #fcd397;
+  --cor4: #f9f9f9;
+  --background: #fff;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Header */
+
+body,
+a {
+  font-family: Montserrat;
+  color: #121212;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 12rem 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.detail {
+  color: var(--cor2);
+}
+
+.menu {
+  font-family: Fira Sans;
+  letter-spacing: 0.5px;
+  display: flex;
+  gap: 2rem;
+}
+
+.menu li {
+  position: relative;
+  padding: 1rem 0;
+  transition: 0.3s;
+}
+
+.menu li a:hover {
+  color: var(--cor2);
+}
+
+.menu li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: var(--cor2);
+  position: absolute;
+  bottom: 0;
+  transition: 0.3s;
+}
+
+.menu li:hover::after {
+  width: 100%;
+}
+
+hr {
+  height: 1px;
+  background-color: #ededed;
+  border-color: var(--cor4);
+}
+
+/* Main */
+
+.main {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  place-items: center;
+  gap: 50px;
+  margin: 100px auto;
+}
+
+.description {
+  display: grid;
+  gap: 24px;
+}
+
+.description p {
+  color: rgba(118, 118, 118, 1);
+}
+
+.description h2 {
+  font: bold 3rem/1.5 "Montserrat", sans-serif;
+}
+
+.description a {
+  display: block;
+  justify-self: start;
+
+  padding: 15px 32px;
+
+  background: var(--cor2);
+  color: var(--cor1);
+
+  border-radius: 3px;
+}
+
+.imagem-principal {
+  border-radius: 3px;
+  box-shadow: 80px -50px var(--cor2);
+}
+
+.division {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, var(--cor3), var(--cor4));
+}
+/* Informações */
+
+.infos {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 64px;
+  margin: 0 auto;
+}
+
+.aboutus {
+  grid-column: 2;
+}
+
+.imagem2 {
+  position: absolute;
+  left: 0;
+  max-width: 100%;
+  box-shadow: -80px -50px var(--cor2);
+}
+
+.aboutus h2 {
+  font-size: 3rem;
+}
+
+.aboutus p {
+  padding: 20px 0;
+  line-height: 1.5;
+  color: rgba(118, 118, 118, 1);
+}
+
+/* Serviços */
+
+.service {
+  margin: 0 auto;
+}
+
+.details-service {
+  text-align: center;
+}
+
+.details-service h2 {
+  font-size: 3rem;
+  padding-bottom: 20px;
+}
+
+.details-service p {
+  color: rgba(118, 118, 118, 1);
+  max-width: 50ch;
+  margin: 0 auto;
+}
+
+.cards {
+  display: flex;
+  flex-basis: 300px;
+  gap: 32px;
+  padding: 64px 0;
+}
+
+.card {
+  flex-basis: 350px;
+  display: grid;
+  padding: 60px 48px;
+  place-items: center;
+  background: rgba(249, 249, 249, 1);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.18);
+  border-bottom: 5px solid var(--cor2);
+}
+
+.card h3 {
+  font-size: 2rem;
+  padding-top: 26px;
+  padding-bottom: 12px;
+}
+
+.card p {
+  color: rgba(118, 118, 118, 1);
+  text-align: center;
+}
+
+/* Depoimentos */
+
+.depoimentos {
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px 22px;
+}
+
+.depoimentos h3 {
+  grid-column: 1 / -1;
+  justify-self: center;
+
+  font-size: 3rem;
+  max-width: 20ch;
+  text-align: center;
+}
+
+.depoimentos-conteudo {
+  background: rgba(249, 249, 249, 1);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.18);
+  padding: 52px;
+  padding-top: 0;
+}
+
+.depoimentos-conteudo p {
+  line-height: 1.8;
+  padding-bottom: 24px;
+}
+
+.depoimentos-conteudo p::before {
+  height: 0px;
+  content: "“";
+  display: inline-block;
+  font-size: 4rem;
+  font-family: "Georgia";
+  color: var(--cor2);
+  position: relative;
+  top: 30px;
+}
+
+.comentario {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.perfil {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.slide {
+  display: block;
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+.bolinha-detail {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: var(--cor2);
+}
+
+.bolinha {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: rgba(228, 228, 228, 1);
+}
+
+/* Contato */
+
+.contato {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25%;
+  margin: 0 auto;
+}
+
+.contato-descricao {
+  display: grid;
+  justify-items: left;
+}
+.contato-descricao h3 {
+  font-size: 3rem;
+  padding-bottom: 12px;
+}
+
+.contato-descricao p {
+  color: rgba(118, 118, 118, 1);
+  padding-bottom: 24px;
+}
+
+.contato-descricao a {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    align-items: center;
+    padding: 15px 32px;
+  border-radius: 3px;
+  background-color: var(--cor2);
+  color: var(--cor1);
+}
+
+.contato-endereco {
+  display: grid;
+  align-content: center;
+  gap: 32px;
+}
+
+.contato-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* footer */ 
+
+.footer-bg {
+  background-color: var(--cor2);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 61px 0;
+}
+
+.footer-description {
+  line-height: 2;
+  color: #F9F9F9;
+}
+
+.footer-description h3 {
+  font-size: 2rem;
+}
+
+.footer-description h3 span {
+  color: #121212;
+}
+
+.redes {
+  display: flex;
+  gap: 32px;
+}
